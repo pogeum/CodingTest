@@ -37,20 +37,57 @@ public class Main {
         int countzero = 0;
         int size = s.length();
         ArrayList<Integer> arrone = new ArrayList<Integer>();
+        int finalsize = arrone.size();
 
-        for(int i = 0;i<size;i++) {
-            int temp = Integer.parseInt(s[i]);
+        while(){
 
-            if(temp==1) {
-                arrone.add(temp);
+
+            for(int i = 0;i<size;i++) {
+                int temp = Integer.parseInt(s[i]);
+
+                if(temp==1) {
+                    arrone.add(temp);
+                }
+                else {
+                    countzero++;
+                }
             }
-            else {
-                countzero++;
-            }
+
         }
+
 
 
         int[] answer = {};
         return answer;
     }
 }
+class Solution {
+    public int[] solution(String s) {
+
+        int countzero = 0;
+        int size = s.length();
+        ArrayList<Integer> arrone = new ArrayList<Integer>();
+        int finalsize = arrone.size();
+        int countloop = 0;
+
+        while(finalsize>1) {
+            for(int i = 0;i<size;i++) {
+                int temp = Integer.parseInt(s[i]);//여기parseint하는배열을 arrone으로해야될거같은데아닌가; ㅏㅣ;ㅓㅏ
+
+                if(temp==1) {
+                    arrone.add(temp);
+                }
+                else {
+                    countzero++;
+                }
+            }
+            // s=arrone; a대충이케
+        }
+
+
+
+        int[] answer = {countzero,countloop};
+        return answer;
+    }
+}
+
